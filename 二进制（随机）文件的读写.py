@@ -11,5 +11,6 @@ if __name__ == "__main__":
         fp.write(b'Xiaoming\n')
         fp.write(b'student')
     with open('my.dat','rb') as fp:
+        fp.seek(0)
         str = fp.read()
         print(str[-7:])

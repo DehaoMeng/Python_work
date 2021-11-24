@@ -17,7 +17,7 @@ def analyze_text(text):
     print("行数：{}".format(lines_count))
     sentences = re.split("[.?!]", text)
     sentences_count = len(sentences)
-    print("行数：{}".format(sentences_count))
+    print("句子数：{}".format(sentences_count))
     words = re.split(r"\W+", text)
     words_count = len(words)
     print("单词数：{}".format(words_count))
