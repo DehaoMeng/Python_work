@@ -7,13 +7,13 @@
 说明:
 '''
 if __name__ == "__main__":
-    a = list(input().split(','))
+    a = list(input().split(','))        #分别输入两个列表，列表中每个元素以逗号分隔
     b = list(input().split(','))
-    c = {}
-    if(len(a) >= len(b)):
+    c = {}                              #创建空集合
+    if(len(a) >= len(b)):               #判断列表长度
         for i in range(len(b)):
             c[a[i]] = b[i]
     else:
         for i in range(len(a)):
             c[a[i]] = b[i]
-    print(c)
+    print(c)                            #打印集合
