@@ -7,8 +7,18 @@
 说明:编写程序，判断用户输入的一个字符串是否为回文。如果是则输出True，否则输出Flase
 '''
 if __name__ == "__main__":
-    a = int(input())
-    if(int(a / 100) == a % 10):
+    a = list(input())
+    # if(int(a / 100) == a % 10):
+    #     print("True")
+    # else:
+    #     print("False")
+    for i in range(len(a)):
+        if(a[i] == a[len(a) - i - 1]):
+            flag = 1
+        else :
+            flag = 0
+            break
+    if(1 == flag) :
         print("True")
-    else:
+    else :
         print("False")
