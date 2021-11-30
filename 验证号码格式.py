@@ -29,7 +29,7 @@ def web_num(url_num):
 if __name__ == "__main__":
     print("请输入要验证的号码格式")
     print("1.中国电话号码格式")
-    print("1.邮政编码")
+    print("2.邮政编码")
     print("3.网站网址格式")
     pro = int(input())
     if(1 == pro):
