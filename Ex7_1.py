@@ -21,21 +21,16 @@ f.close()
 
 # 自动绘制
 for i in range(len(datals)):
-    # 每次转向后画笔落笔
-    t.pendown()
-    t.pencolor(datals[i][3],datals[i][4],datals[i][5])
-    t.fd(datals[i][0])
-    # 每次画后抬笔
-    t.penup()
-    if datals[i][1]:
-        # 突显有抬笔的动作。
-        time.sleep(1)
-        t.rt(datals[i][2])
-
+    # 判断是为抬笔或者落笔
+    if datals[i][0] == 1:
+        t.pendown()
+    elif datals[i][0] == 0:
+        t.penup()
+        continue
+    t.pencolor(datals[i][4],datals[i][5],datals[i][6])
+    t.fd(datals[i][1])
+    if datals[i][2]:
+        t.rt(datals[i][3])
     else:
-        # 凸显有抬笔的动作。
-        time.sleep(1)
-        t.lt(datals[i][2])
-
-        
+        t.lt(datals[i][3])
 t.done()
